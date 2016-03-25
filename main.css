@@ -68,9 +68,18 @@
 }
 
 #button {
+    display: block solid 2px;
+    border-color: rgba(103, 157, 157, 0.08);
     border-bottom-left-radius: 3px;
      border-bottom-right-radius: 3px;
      border-top-left-radius: 3px;
      border-top-right-radius: 3px;
+    width: 90px;
+    height: 30px;
+    background-color: #10103b;
+    font-family: Dosis;
+    font-size:14px;
+    font-weight: 700;
+    color: beige;
 
 }
