@@ -1,7 +1,8 @@
 
 #nav ul{
     display: inline-block;
-    border: transparent solid;
+    width: 100%;
+
 
 }
 #nav ul li{
@@ -22,16 +23,21 @@
     text-decoration: none;
     font-family:Raleway;
     font-size: 30px;
-    background: black;
-    padding-left: 120px;
+    padding-left: 100px;
+
+
 }
 #nav a{
     display: block;
-}
+    color: beige;
 
 }
 
-#nav li{
-    display: block;
-    padding:8px;
+
+#circ {
+    background-color: transparent;
+}
+
+#list {
+    background-color: #10103b;
 }
