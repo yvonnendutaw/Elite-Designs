@@ -21,7 +21,15 @@
 .contact ul{
     list-style: none;
 }
+/*logo*/
+.logo{
+    position: relative;
+    top: -200px;
+    left: 850px;
+}
 /*copyright*/
 footer>p{
     text-align: center;
+    position: relative;
+    top: -70px;
 }
