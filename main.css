@@ -83,3 +83,20 @@
     color: beige;
 
 }
+
+#alltext {
+    display: block;
+    border: solid 5px rgba(48, 48, 116, 0.13);
+    font-family: Alegreya Sans SC;
+    margin-top:15%;
+    width:60%;
+    margin-left: 19%;
+    padding: 19px;
+    background-color: rgba(48, 48, 116, 0.13);
+}
+
+#about {
+    text-align: center;
+    font-size: 39px;
+
+}
