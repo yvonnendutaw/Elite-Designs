@@ -26,8 +26,7 @@ a {
 }
 
 h1 {
-  color: #ffffff;
-  margin-bottom: 1em;
+  color: #464398;
   font-size: 2.2rem;
 font-family: 'Alegreya', serif;
 }
@@ -37,9 +36,10 @@ font-family: 'Alegreya', serif;
     font-weight: 300;
   }
     h2{
-        color: #fdfdfd;
+         color: #464398;
   font-size: 2.2rem;
         font-family: 'Alegreya', serif;
+        margin-bottom: 1em;
 }
 @media only screen and (min-width: 768px) {
   h2 {
@@ -56,9 +56,10 @@ Patterns - reusable parts of our design
 .cd-btn {
   display: inline-block;
   padding: 1.4em 1.6em;
+  margin-top: 2em;
   margin-bottom: 2em;
   border-radius: 50em;
-  background-color: #354a74;
+  background-color: #59709f;
   color: #ffffff;
   font-weight: bold;
   font-size: 1.3rem;
@@ -169,13 +170,11 @@ main .cd-main-content.cd-index > div {
 }
 main .cd-main-content.cd-index::after {
   background-color: rgba(64, 137, 166, 0);
-  background-image: -webkit-linear-gradient(bottom, #4089a6, rgba(64, 137, 166, 0));
-  background-image: linear-gradient(to top,#4089a6, rgba(64, 137, 166, 0));
+
 }
 main .cd-main-content.cd-index::before {
   background-color: rgba(64, 137, 166, 0);
-  background-image: -webkit-linear-gradient(top, #4089a6, rgba(64, 137, 166, 0));
-  background-image: linear-gradient(to bottom,#4089a6, rgba(64, 137, 166, 0));
+
 }
 main .cd-main-content.cd-about {
   /* .cd-main-content basic style - about page */
