@@ -1,0 +1,27 @@
+/*icons-footer*/
+.icons ul{
+    list-style: none;
+}
+.icons li{
+    display: inline-block;
+    padding-right: 7px;
+}
+.icons{
+    width: 450px;
+}
+/*contact-footer*/
+.contact{
+    width: 450px;
+    margin: 0;
+    position: relative;
+    top: -100px;
+    bottom: 500px;
+    left: 380px;
+}
+.contact ul{
+    list-style: none;
+}
+/*copyright*/
+footer>p{
+    text-align: center;
+}
