@@ -68,7 +68,7 @@ Patterns - reusable parts of our design
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 .no-touch .cd-btn:hover {
-  background-color: #323c50;
+  background-color: #a6b1c6;
 }
 .cd-about .cd-btn {
   background-color: #4089a6;
@@ -178,10 +178,10 @@ main .cd-main-content.cd-index::before {
 }
 main .cd-main-content.cd-about {
   /* .cd-main-content basic style - about page */
-  background-color: #283040;
+  background-color: #f4f6f8;
 }
 main .cd-main-content.cd-about > div {
-  padding-top: 50px;
+  padding-top: 5px;
 }
 main .cd-main-content.cd-about::after {
   background-color: rgba(40, 48, 64, 0);
@@ -199,7 +199,7 @@ main p {
   margin: 3em auto;
   font-size: 1.4rem;
   line-height: 1.6;
-  color: #535966;
+  color: #e5e7eb;
   text-align: left;
 }
 @media only screen and (min-width: 768px) {
