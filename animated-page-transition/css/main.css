@@ -3,16 +3,13 @@
 #nav ul{
     display: inline-block;
     width: 100%;
-
-
 }
 #nav ul li{
-
     list-style: none;
     display: block;
     float: left;
     height: 60px;
-    line-height: 40px;
+    line-height: 40%;
 
 
 
@@ -25,13 +22,8 @@
     font-size: 30px;
     margin-left: 100px;
 
+}
 
-}
-#nav a{
-    display: block;
-    color: beige;
-    text-align: center;
-}
 
 
 #circ {
@@ -139,3 +131,7 @@
     background-color: black;
 }
 >>>>>>> yvonne
+
+#nav {
+      background-color: #10103b;
+}
