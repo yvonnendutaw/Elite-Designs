@@ -30,7 +30,7 @@
     background-color: transparent;
 }
 
-#list {
+#list li {
     background-color: #10103b;
 }
 
@@ -81,6 +81,7 @@
     display: block;
     border: solid 5px rgba(48, 48, 116, 0.13);
     font-family: Alegreya Sans SC;
+    color: black;
     margin-top:10%;
     width:60%;
     margin-left: 19%;
@@ -98,16 +99,13 @@
     background-color: azure;
     text-align: center;
     font-family: Raleway;
+    color: black;
     width: 100%;
     margin-top: 40px;
     margin-bottom: 20px;
 
 }
 
-
-#Dtable td{
-    padding: px;
-}
 
 #img h3{
     padding-top: 18px;
