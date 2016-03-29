@@ -62,6 +62,7 @@ Patterns - reusable parts of our design
 
 	.no-touch &:hover {
 		box-shadow: 0 1px 30px rgba($color-2, .4), inset 0 1px 0 rgba(#fff, .4);
+        padding-top: 12px;
 	}
 }
 

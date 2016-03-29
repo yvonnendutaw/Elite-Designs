@@ -37,6 +37,7 @@ Patterns - reusable parts of our design
   padding: 1.4em 2em;
   border-radius: 50em;
   background-color: #08070b;
+    margin-top: 12px;
   box-shadow: 0 1px 20px rgba(238, 187, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4);
   color: #ffffff;
   font-size: 1.3rem;
