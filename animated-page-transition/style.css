@@ -36,7 +36,7 @@ Patterns - reusable parts of our design
   display: inline-block;
   padding: 1.4em 2em;
   border-radius: 50em;
-  background-color: #eebb00;
+  background-color: #08070b;
   box-shadow: 0 1px 20px rgba(238, 187, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4);
   color: #ffffff;
   font-size: 1.3rem;
@@ -48,7 +48,7 @@ Patterns - reusable parts of our design
   transition: box-shadow 0.2s;
 }
 .no-touch .cd-btn:hover {
-  box-shadow: 0 1px 30px rgba(238, 187, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  box-shadow: 0 1px 30px rgba(83, 77, 54, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .cd-img-replace {
