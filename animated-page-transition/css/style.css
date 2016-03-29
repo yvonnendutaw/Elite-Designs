@@ -179,6 +179,7 @@ main .cd-main-content.cd-index::before {
 main .cd-main-content.cd-about {
   /* .cd-main-content basic style - about page */
   background-color: #f4f6f8;
+    font:Dosis;
 }
 main .cd-main-content.cd-about > div {
   padding-top: 5px;
