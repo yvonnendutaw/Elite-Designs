@@ -129,12 +129,12 @@ body.page-is-changing::after, body.page-is-changing::before {
 
 main {
   height: 100vh;
-  padding: 10px;
+  padding: 1px;
   text-align: center;
 }
 main .cd-main-content {
   position: relative;
-  height: calc(100vh - 20px);
+  height: calc(100vh;
 }
 main .cd-main-content > div {
   height: 100%;
@@ -186,7 +186,7 @@ main .cd-main-content.cd-about > div {
 }
 main .cd-main-content.cd-about::after {
   background-color: rgba(40, 48, 64, 0);
-  background-image: -webkit-linear-gradient(bottom, #283040, rgba(40, 48, 64, 0));
+  background-image: -webkit-linear-gradient(bottom, #283040, rgba(236, 237, 239, 0));
   background-image: linear-gradient(to top,#283040, rgba(40, 48, 64, 0));
 }
 main .cd-main-content.cd-about::before {
