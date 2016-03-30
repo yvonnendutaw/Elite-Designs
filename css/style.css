@@ -39,14 +39,11 @@
     background-size: cover;
 }
 /*footer*/
-footer{
-    margin-top: 150px;
-    font-family: 'Raleway', sans-serif;
-}
 footer>section{
     display: inline-block;
     text-align: center;
     align-items: center;
+    font-family: 'Raleway', sans-serif;
 }
 .icons{
     width: 450px;
@@ -58,8 +55,12 @@ footer>section{
 .icons a{
     color: black
 }
+.contact li{
+    padding-bottom: 10px;
+}
 .contact{
     width: 450px;
+    margin-top: 50px;
 }
 .logo{
     width: 450px;
@@ -67,5 +68,9 @@ footer>section{
 /*all right reseved*/
 #copyright{
     text-align: center;
-    padding-top: 50px;
+    margin: 70px 0;
+}
+.icons h3{
+    font size 20px;
+    padding-bottom: 10px;
 }
