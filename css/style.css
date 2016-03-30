@@ -1,7 +1,13 @@
+/*location*/
+.location{
+    background-color: rgb(50, 50, 50);
+}
 .location>section{
+    margin: auto;
     width: 400px;
     height: 500px;
-    background-size: cover;
+    background-size: 100% 80%;
+    background-repeat: no-repeat;
     display: inline-block;
     text-align: center;
     color: floralwhite;
