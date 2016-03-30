@@ -397,6 +397,10 @@ Projects
     width: 100%;
     top: calc(50% - 20px);
     left: 0;
+    display: block;
+    border: solid 1px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.62);
     color: #ffffff;
     -webkit-transform: translateY(-37.5vh);
     -moz-transform: translateY(-37.5vh);
@@ -777,4 +781,11 @@ JavaScript Disabled
 }
 .no-js .cd-primary-nav li:not(.cd-label) {
     display: inline-block;
+}
+h3 {
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 40px;
+    color: #32326f;
+    font-family: Raleway;
 }
