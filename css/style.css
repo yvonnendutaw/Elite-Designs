@@ -1,3 +1,55 @@
+/*location*/
 .location{
     background-color: rgb(50, 50, 50);
+    text-align: center;
+    align-items: center;
+    padding: 50px 0;
+    margin: 20px 0;
+}
+.locales>section{
+    width: 400px;
+    height: 500px;
+    display: inline-block;
+    color: floralwhite;
+}
+#nairobi{
+    background-image: url(../img/nai.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#rome{
+    background-image: url(../img/rome.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#nyc{
+    background-image: url(../img/nyc.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*footer*/
+footer{
+    margin-top: 150px;
+}
+footer>section{
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+}
+.icons{
+    width: 450px;
+}
+.icons li{
+    display: inline;
+}
+.contact{
+    width: 450px;
+}
+.logo{
+    width: 450px;
+}
+/*all right reseved*/
+#copyright{
+    text-align: center;
+    padding-top: 50px;
 }
