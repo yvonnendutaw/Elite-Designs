@@ -12,6 +12,17 @@
     display: inline-block;
     color: floralwhite;
 }
+.location h3{
+    padding-top: 200px;
+    font-family: 'Candal', sans-serif;
+    font-size: 100px;
+}
+.locales>section>p{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.60);
+
+}
 #nairobi{
     background-image: url(../img/nai.jpg);
     background-repeat: no-repeat;
@@ -30,6 +41,7 @@
 /*footer*/
 footer{
     margin-top: 150px;
+    font-family: 'Raleway', sans-serif;
 }
 footer>section{
     display: inline-block;
@@ -41,6 +53,10 @@ footer>section{
 }
 .icons li{
     display: inline;
+    padding-right: 10px;
+}
+.icons a{
+    color: black
 }
 .contact{
     width: 450px;
