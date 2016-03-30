@@ -817,6 +817,15 @@ Keyframes
     opacity: 1;
   }
 }
+.location>section{
+    width: 400px;
+    height: 500px;
+    background-size: cover;
+    display: inline-block;
+    text-align: center;
+    color: floralwhite;
+    margin: auto;
+}
 #nairobi{
     background-image: url(../../../img/nai.jpg);
 }
