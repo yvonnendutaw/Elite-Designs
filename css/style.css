@@ -84,6 +84,7 @@ footer>section {
     display: block solid 6px;
     width: 10%;
     padding-left: 4px;
-    font-size: 50px;
-    color: beige;
+    font-size: 25px;
+
+    color: rgba(13, 7, 7, 0.31)
 }
