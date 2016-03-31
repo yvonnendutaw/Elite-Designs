@@ -13,14 +13,16 @@
     text-decoration: none;
     font-family: Raleway;
     font-size: 30px;
-    padding-right: 104px;
+    color: white;
+    padding-right: 115px;
+}
+#nav ul li:hover {
+    font-size: 40px;
 }
 #circ {
     background-color: transparent;
 }
 #list li {
-    display: block;
-    border: solid 5px green;
     background-color: #10103b;
     padding: 2px;
     ;
