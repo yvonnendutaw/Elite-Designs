@@ -47,7 +47,6 @@ footer>section {
     align-items: center;
     font-family: 'Raleway', sans-serif;
 }
-
 .icons li {
     display: inline;
     padding-right: 10px;
@@ -59,10 +58,7 @@ footer>section {
     padding-bottom: 10px;
 }
 
-
-
 /*all right reseved*/
-
 
 .icons h3 {
     font size 20px;
@@ -73,23 +69,21 @@ footer>section {
     width: 100%;
     color: white;
 }
-
-
 #fotpart {
-    padding-left:60px;
+    padding-left: 60px;
     border-collapse: separate;
     margin: 24px;
     display: block;
     font-size: 20px;
-
 }
-#fotpart td{
-
-    display:inline-block;
+#fotpart td {
+    display: inline-block;
     padding: 30px;
 }
-
-
 #logtitle {
-    line-height: 60px;
+    display: block solid 6px;
+    width: 10%;
+    padding-left: 4px;
+    font-size: 50px;
+    color: beige;
 }
