@@ -1,76 +1,84 @@
 /*location*/
-.location{
+
+.location {
     background-color: rgb(50, 50, 50);
     text-align: center;
     align-items: center;
     padding: 50px 0;
     margin: 20px 0;
 }
-.locales>section{
+.locales>section {
     width: 400px;
     height: 500px;
     display: inline-block;
     color: floralwhite;
 }
-.location h3{
+.location h3 {
     padding-top: 200px;
     font-family: 'Candal', sans-serif;
     font-size: 100px;
 }
-.locales>section>p{
+.locales>section>p {
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
     background-color: rgba(0, 0, 0, 0.60);
-
 }
-#nairobi{
+#nairobi {
     background-image: url(../img/nai.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-#rome{
+#rome {
     background-image: url(../img/rome.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-#nyc{
+#nyc {
     background-image: url(../img/nyc.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 /*footer*/
-footer>section{
+
+footer>section {
     display: inline-block;
     text-align: center;
     align-items: center;
     font-family: 'Raleway', sans-serif;
 }
-.icons{
+.icons {
     width: 450px;
 }
-.icons li{
+.icons li {
     display: inline;
     padding-right: 10px;
 }
-.icons a{
+.icons a {
     color: black
 }
-.contact li{
+.contact li {
     padding-bottom: 10px;
 }
-.contact{
+.contact {
     width: 450px;
     margin-top: 50px;
 }
-.logo{
+.logo {
     width: 450px;
 }
+
 /*all right reseved*/
-#copyright{
+
+#copyright {
     text-align: center;
     margin: 70px 0;
 }
-.icons h3{
+.icons h3 {
     font size 20px;
     padding-bottom: 10px;
+}
+.locales table {
+    display: inline-grid;
+    width: 100%;
 }
