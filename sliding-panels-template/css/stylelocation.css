@@ -1,7 +1,7 @@
 /*location*/
 
 .location {
-    background-color: rgb(50, 50, 50);
+    background-color: #10103b;
     text-align: center;
     align-items: center;
     padding: 50px 0;
@@ -85,6 +85,13 @@ footer>section {
     width: 10%;
     padding-left: 4px;
     font-size: 25px;
-
     color: rgba(13, 7, 7, 0.31)
+}
+.locales a {
+    text-decoration: none;
+    color: white;
+}
+.locales a:hover {
+    display: block;
+    border: solid 4px;
 }

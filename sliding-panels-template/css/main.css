@@ -2,7 +2,17 @@
     display: inline-block;
     width: 100%;
 }
+#luc ul {
+    display: inline-block;
+    width: 100%;
+}
 #nav ul li {
+    list-style: none;
+    display: block;
+    float: left;
+    height: 40px;
+}
+#luc ul li {
     list-style: none;
     display: block;
     float: left;
@@ -15,6 +25,17 @@
     font-size: 30px;
     color: white;
     padding-right: 115px;
+}
+#luc ul li a {
+    text-align: center;
+    text-decoration: none;
+    font-family: Raleway;
+    font-size: 30px;
+    color: white;
+    padding-right: 193px;
+}
+#luc ul li:hover {
+    font-size: 40px;
 }
 #nav ul li:hover {
     font-size: 40px;
@@ -31,7 +52,7 @@
     display: block solid 6px;
     width: 10%;
     padding-left: 4px;
-    font-size: 50px;
+    font-size: 40px;
     color: beige;
 }
 #txt {
