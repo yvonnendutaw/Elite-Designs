@@ -87,22 +87,18 @@
     color: beige;
 }
 #alltext {
-    display: block;
-    border: solid 5px rgba(48, 48, 116, 0.13);
     font-family: Alegreya Sans SC;
     color: black;
-    margin-top: 10%;
+    margin-top: 1%;
     width: 60%;
     margin-left: 19%;
     padding: 12px;
-    background-color: rgba(48, 48, 116, 0.13);
 }
 #about {
     text-align: center;
     font-size: 39px;
 }
 #Dtable {
-    background-color: azure;
     text-align: center;
     font-family: Raleway;
     color: black;
@@ -115,7 +111,7 @@
 }
 #contbg {
     display: block;
-    border: 5px solid transparent;
+    border: 5px solid transparen;
     margin: 19px;
 }
 #text {
@@ -126,5 +122,4 @@
 yvonne #nav {
     background-color: #10103b;
 }
-
-
+yellow
