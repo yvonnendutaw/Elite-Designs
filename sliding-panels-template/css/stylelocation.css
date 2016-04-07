@@ -116,8 +116,12 @@ footer>section {
     background-color: #262423;
 }
 .nav a {
+    display: inline-block;
     padding: .3em;
-    font-size: 3em;
+    font-size: 2em;
     text-decoration: none;
     color: white;
+}
+.nav a:hover {
+    background: #000000;
 }
