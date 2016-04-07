@@ -16,19 +16,27 @@
     padding-top: 150px;
     font-family: 'Candal', sans-serif;
     font-size: 100px;
+    color: rgba(0, 0, 0, 0.61);
 }
 .locales>section>p {
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.60);
+    color: black;
 }
 #nairobi {
     background-image: url(../img/nairobi.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    color: #000;
+}
+#nairobi p,
+#rome p,
+#nyc p {
+    color: black;
+    font-weight: 900;
 }
 #rome {
-    background-image: url(../img/skip-the-line-ancient-rome-and-colosseum-half-day-walking-tour-in-rome-114992.jpg);
+    background-image: url(../img/ctic-Rome-coliseum.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -49,6 +57,7 @@ footer>section {
 .icons li {
     display: inline;
     padding-right: 10px;
+    font-size: 0.5em;
 }
 .icons a {
     color: black
@@ -100,4 +109,11 @@ footer>section {
 }
 .fnt {
     font-family: Raleway;
+}
+location {
+    text-align: center;
+    align-items: center;
+    padding: 50px 0;
+    margin: 20px 0;
+    font-size: 1.5em;
 }
