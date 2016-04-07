@@ -1,138 +1,137 @@
-    /*location*/
+        /*location*/
 
-.location {
-    text-align: center;
-    align-items: center;
-    padding: 50px 0;
-    margin: 20px 0;
-}
-.locales>section {
-    width: 400px;
-    height: 500px;
-    display: inline-block;
-    color: floralwhite;
-}
-.location h3 {
-    padding-top: 150px;
-    font-family: 'Candal', sans-serif;
-    font-size: 100px;
-    color: rgba(0, 0, 0, 0.61);
-}
-.locales>section>p {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 20px;
-    color: black;
-}
-#nairobi {
-    background-image: url(../img/nairobi.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #000;
-}
-#nairobi p,
-#rome p,
-#nyc p {
-    color: black;
-    font-weight: 900;
-}
-#rome {
-    background-image: url(../img/ctic-Rome-coliseum.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#nyc {
-    background-image: url(../img/NYC_2-compressor.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/*footer*/
-
-footer>section {
-    display: inline-block;
-    text-align: center;
-    align-items: center;
-    font-family: 'Raleway', sans-serif;
-}
-.icons li {
-    display: inline;
-    padding-right: 10px;
-    font-size: 0.5em;
-}
-.icons a {
-    color: black
-}
-.contact li {
-    padding-bottom: 10px;
-}
-
-/*all right reseved*/
-
-.icons h3 {
-    font size 20px;
-    padding-bottom: 10px;
-}
-#fotpart {
-    padding-left: 60px;
-    border-collapse: separate;
-    margin: 24px;
-    display: block;
-    font-size: 20px;
-}
-#fotpart td {
-    display: inline-block;
-    padding: 30px;
-}
-#logtitle {
-    display: block solid 6px;
-    width: 10%;
-    padding-left: 4px;
-    font-size: 25px;
-    color: rgba(13, 7, 7, 0.31)
-}
-.locales a {
-    text-decoration: none;
-    color: white;
-}
-.locales a:hover {
-    display: block;
-    border: solid 4px transparent;
-}
-.locales {
-    caption-side: top;
-}
-#cap {
-    margin-bottom: 12px;
-    color: black;
-    font-size: 3em;
-    margin-bottom: 12px;
-}
-.fnt {
-    font-family: Raleway;
-}
-.navigation ul li {
-    display: inline-block;
-}
-.navigation ul {
-    font-family: Raleway;
-    display: block;
-    border: solid 1px;
-    background-color: #262423;
-}
-.navigation a {
-    display: inline-block;
-    padding: .3em;
-    font-size: 2em;
-    text-decoration: none;
-    color: white;
-}
-.navigation a:hover {
-    background: #000000;
-    =======location {
+    .location {
         text-align: center;
         align-items: center;
         padding: 50px 0;
         margin: 20px 0;
-        font-size: 1.5em;
-        >>>>>>> yvonne
     }
+    .locales>section {
+        width: 400px;
+        height: 500px;
+        display: inline-block;
+        color: floralwhite;
+    }
+    .location h3 {
+        padding-top: 150px;
+        font-family: 'Candal', sans-serif;
+        font-size: 100px;
+        color: rgba(0, 0, 0, 0.61);
+    }
+    .locales>section>p {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 20px;
+        color: black;
+    }
+    #nairobi {
+        background-image: url(../img/nairobi.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #000;
+    }
+    #nairobi p,
+    #rome p,
+    #nyc p {
+        color: black;
+        font-weight: 900;
+    }
+    #rome {
+        background-image: url(../img/ctic-Rome-coliseum.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #nyc {
+        background-image: url(../img/NYC_2-compressor.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    /*footer*/
+
+    footer>section {
+        display: inline-block;
+        text-align: center;
+        align-items: center;
+        font-family: 'Raleway', sans-serif;
+    }
+    .icons li {
+        display: inline;
+        padding-right: 10px;
+        font-size: 0.5em;
+    }
+    .icons a {
+        color: black
+    }
+    .contact li {
+        padding-bottom: 10px;
+    }
+    /*all right reseved*/
+
+    .icons h3 {
+        font size 20px;
+        padding-bottom: 10px;
+    }
+    #fotpart {
+        padding-left: 60px;
+        border-collapse: separate;
+        margin: 24px;
+        display: block;
+        font-size: 20px;
+    }
+    #fotpart td {
+        display: inline-block;
+        padding: 30px;
+    }
+    #logtitle {
+        display: block solid 6px;
+        width: 10%;
+        padding-left: 4px;
+        font-size: 25px;
+        color: rgba(13, 7, 7, 0.31)
+    }
+    .locales a {
+        text-decoration: none;
+        color: white;
+    }
+    .locales a:hover {
+        display: block;
+        border: solid 4px transparent;
+    }
+    .locales {
+        caption-side: top;
+    }
+    #cap {
+        margin-bottom: 12px;
+        color: black;
+        font-size: 3em;
+        margin-bottom: 12px;
+    }
+    .fnt {
+        font-family: Raleway;
+    }
+    .navigation ul li {
+        display: inline-block;
+    }
+    .navigation ul {
+        font-family: Raleway;
+        font-weight: 600;
+        display: block;
+        border: solid 1px;
+        background-color: #262423;
+    }
+    .navigation a {
+        display: inline-block;
+        padding: .3em;
+        font-size: 2em;
+        text-decoration: none;
+        color: white;
+    }
+    .navigation a:hover {
+        background: #000000;
+        =======location {
+            text-align: center;
+            align-items: center;
+            padding: 50px 0;
+            margin: 20px 0;
+            font-size: 1.5em;
+            >>>>>>> yvonne
+        }
