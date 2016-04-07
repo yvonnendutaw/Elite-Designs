@@ -1,7 +1,6 @@
 /*location*/
 
 .location {
-    background-color: #10103b;
     text-align: center;
     align-items: center;
     padding: 50px 0;
@@ -14,7 +13,7 @@
     color: floralwhite;
 }
 .location h3 {
-    padding-top: 200px;
+    padding-top: 150px;
     font-family: 'Candal', sans-serif;
     font-size: 100px;
 }
@@ -24,17 +23,17 @@
     background-color: rgba(0, 0, 0, 0.60);
 }
 #nairobi {
-    background-image: url(../img/nai.jpg);
+    background-image: url(../img/nairobi.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 #rome {
-    background-image: url(../img/rome.jpg);
+    background-image: url(../img/skip-the-line-ancient-rome-and-colosseum-half-day-walking-tour-in-rome-114992.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 #nyc {
-    background-image: url(../img/nyc.jpeg);
+    background-image: url(../img/NYC_2-compressor.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -63,11 +62,6 @@ footer>section {
 .icons h3 {
     font size 20px;
     padding-bottom: 10px;
-}
-.locales table {
-    display: inline-grid;
-    width: 100%;
-    color: white;
 }
 #fotpart {
     padding-left: 60px;
@@ -99,10 +93,11 @@ footer>section {
     caption-side: top;
 }
 #cap {
-    font-size: 30px;
+    margin-bottom: 12px;
+    color: black;
+    font-size: 3em;
     margin-bottom: 12px;
 }
-
 .fnt {
     font-family: Raleway;
 }
