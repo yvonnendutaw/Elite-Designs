@@ -1,4 +1,4 @@
-/*location*/
+    /*location*/
 
 .location {
     text-align: center;
@@ -110,32 +110,29 @@ footer>section {
 .fnt {
     font-family: Raleway;
 }
-<<<<<<< HEAD
-.nav ul li {
-    display: inline;
+.navigation ul li {
+    display: inline-block;
 }
-.nav ul {
+.navigation ul {
     font-family: Raleway;
-    width: display: block;
+    display: block;
     border: solid 1px;
-    /*    background: linear-gradient(to bottom right, #3A3033, rgba(255, 0, 0, 0));*/
     background-color: #262423;
 }
-.nav a {
+.navigation a {
     display: inline-block;
     padding: .3em;
     font-size: 2em;
     text-decoration: none;
     color: white;
 }
-.nav a:hover {
+.navigation a:hover {
     background: #000000;
-=======
-location {
-    text-align: center;
-    align-items: center;
-    padding: 50px 0;
-    margin: 20px 0;
-    font-size: 1.5em;
->>>>>>> yvonne
-}
+    =======location {
+        text-align: center;
+        align-items: center;
+        padding: 50px 0;
+        margin: 20px 0;
+        font-size: 1.5em;
+        >>>>>>> yvonne
+    }
