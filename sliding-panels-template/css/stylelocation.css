@@ -105,3 +105,19 @@ footer>section {
 .fnt {
     font-family: Raleway;
 }
+.nav ul li {
+    display: inline;
+}
+.nav ul {
+    font-family: Raleway;
+    width: display: block;
+    border: solid 1px;
+    /*    background: linear-gradient(to bottom right, #3A3033, rgba(255, 0, 0, 0));*/
+    background-color: #262423;
+}
+.nav a {
+    padding: .3em;
+    font-size: 3em;
+    text-decoration: none;
+    color: white;
+}
