@@ -98,6 +98,9 @@
     text-align: center;
     font-size: 39px;
 }
+.people ul {
+    list-style: none;
+}
 #Dtable {
     text-align: center;
     font-family: Raleway;
