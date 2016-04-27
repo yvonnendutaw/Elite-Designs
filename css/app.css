@@ -1,6 +1,14 @@
 html,
 body,
 h1,
-h3 {
+h3,
+p {
     font-family: 'Lora', serif;
+}
+.header h1 {
+    color: #C42332;
+}
+.header h1,
+h3 {
+    text-align: center;
 }
