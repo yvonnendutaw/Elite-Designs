@@ -2,7 +2,7 @@
 
   "use strict";
 
-  var FOUNDATION_VERSION = '6.2.0';
+  var FOUNDATION_VERSION = '6.2.1';
 
   // Global Foundation object
   // This is attached to the window, or used as a module for AMD/Browserify
@@ -1060,6 +1060,18 @@
           top: $eleDims.windowDims.offset.top
         };
         break;
+      case 'left bottom':
+        return {
+          left: $anchorDims.offset.left - ($eleDims.width + hOffset),
+          top: $anchorDims.offset.top + $anchorDims.height
+        };
+        break;
+      case 'right bottom':
+        return {
+          left: $anchorDims.offset.left + $anchorDims.width + hOffset - $eleDims.width,
+          top: $anchorDims.offset.top + $anchorDims.height
+        };
+        break;
       default:
         return {
           left: Foundation.rtl() ? $anchorDims.offset.left - $eleDims.width + $anchorDims.width : $anchorDims.offset.left,
@@ -1910,6 +1922,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       /**
+       * Get the set of labels associated with a set of radio els in this order
+       * 2. The <label> with the attribute `[for="someInputId"]`
+       * 3. The `.closest()` <label>
+       *
+       * @param {Object} $el - jQuery object to check for required attribute
+       * @returns {Boolean} Boolean value depends on whether or not attribute is checked or empty
+       */
+
+    }, {
+      key: 'findRadioLabels',
+      value: function findRadioLabels($els) {
+        var _this3 = this;
+
+        var labels = $els.map(function (i, el) {
+          var id = el.id;
+          var $label = _this3.$element.find('label[for="' + id + '"]');
+
+          if (!$label.length) {
+            $label = $(el).closest('label');
+          }
+          return $label[0];
+        });
+
+        return $(labels);
+      }
+
+      /**
        * Adds the CSS error class as specified by the Abide settings to the label, input, and the form
        * @param {Object} $el - jQuery object to add the class to
        */
@@ -1932,6 +1971,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       /**
+       * Remove CSS error classes etc from an entire radio button group
+       * @param {String} groupName - A string that specifies the name of a radio button group
+       *
+       */
+
+    }, {
+      key: 'removeRadioErrorClasses',
+      value: function removeRadioErrorClasses(groupName) {
+        var $els = this.$element.find(':radio[name="' + groupName + '"]');
+        var $labels = this.findRadioLabels($els);
+        var $formErrors = this.findFormError($els);
+
+        if ($labels.length) {
+          $labels.removeClass(this.options.labelErrorClass);
+        }
+
+        if ($formErrors.length) {
+          $formErrors.removeClass(this.options.formErrorClass);
+        }
+
+        $els.removeClass(this.options.inputErrorClass).removeAttr('data-invalid');
+      }
+
+      /**
        * Removes CSS error class as specified by the Abide settings from the label, input, and the form
        * @param {Object} $el - jQuery object to remove the class from
        */
@@ -1939,6 +2002,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       key: 'removeErrorClasses',
       value: function removeErrorClasses($el) {
+        // radios need to clear all of the els
+        if ($el[0].type == 'radio') {
+          return this.removeRadioErrorClasses($el.attr('name'));
+        }
+
         var $label = this.findLabel($el);
         var $formError = this.findFormError($el);
 
@@ -2120,12 +2188,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       key: 'matchValidation',
       value: function matchValidation($el, validators, required) {
-        var _this3 = this;
+        var _this4 = this;
 
         required = required ? true : false;
 
         var clear = validators.split(' ').map(function (v) {
-          return _this3.options.validators[v]($el, required, $el.parent());
+          return _this4.options.validators[v]($el, required, $el.parent());
         });
         return clear.indexOf(false) === -1;
       }
@@ -2659,23 +2727,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           $elements.each(function (i) {
             if ($(this).is($element)) {
-              $prevElement = $elements.eq(Math.max(0, i - 1));
-              $nextElement = $elements.eq(Math.min(i + 1, $elements.length - 1));
+              $prevElement = $elements.eq(Math.max(0, i - 1)).find('a').first();
+              $nextElement = $elements.eq(Math.min(i + 1, $elements.length - 1)).find('a').first();
 
               if ($(this).children('[data-submenu]:visible').length) {
                 // has open sub menu
-                $nextElement = $element.find('li:first-child');
+                $nextElement = $element.find('li:first-child').find('a').first();
               }
               if ($(this).is(':first-child')) {
                 // is first element of sub menu
-                $prevElement = $element.parents('li').first();
+                $prevElement = $element.parents('li').first().find('a').first();
               } else if ($prevElement.children('[data-submenu]:visible').length) {
                 // if previous element has open sub menu
-                $prevElement = $prevElement.find('li:last-child');
+                $prevElement = $prevElement.find('li:last-child').find('a').first();
               }
               if ($(this).is(':last-child')) {
                 // is last element of sub menu
-                $nextElement = $element.parents('li').first().next('li');
+                $nextElement = $element.parents('li').first().next('li').find('a').first();
               }
 
               return;
@@ -2685,7 +2753,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             open: function () {
               if ($target.is(':hidden')) {
                 _this.down($target);
-                $target.find('li').first().focus();
+                $target.find('li').first().find('a').first().focus();
               }
             },
             close: function () {
@@ -2695,14 +2763,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               } else if ($element.parent('[data-submenu]').length) {
                 // close currently open sub
                 _this.up($element.parent('[data-submenu]'));
-                $element.parents('li').first().focus();
+                $element.parents('li').first().find('a').first().focus();
               }
             },
             up: function () {
-              $prevElement.focus();
+              $prevElement.attr('tabindex', -1).focus();
+              e.preventDefault();
             },
             down: function () {
-              $nextElement.focus();
+              $nextElement.attr('tabindex', -1).focus();
+              e.preventDefault();
             },
             toggle: function () {
               if ($element.children('[data-submenu]').length) {
@@ -2713,7 +2783,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _this.hideAll();
             },
             handled: function () {
-              e.preventDefault();
               e.stopImmediatePropagation();
             }
           });
@@ -2896,9 +2965,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     _createClass(Drilldown, [{
       key: '_init',
       value: function _init() {
-        this.$submenuAnchors = this.$element.find('li.is-drilldown-submenu-parent');
-        this.$submenus = this.$submenuAnchors.children('[data-submenu]');
-        this.$menuItems = this.$element.find('li').not('.js-drilldown-back').attr('role', 'menuitem');
+        this.$submenuAnchors = this.$element.find('li.is-drilldown-submenu-parent').children('a');
+        this.$submenus = this.$submenuAnchors.parent('li').children('[data-submenu]');
+        this.$menuItems = this.$element.find('li').not('.js-drilldown-back').attr('role', 'menuitem').find('a');
 
         this._prepareMenu();
 
@@ -2969,7 +3038,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           // if(e.target !== e.currentTarget.firstElementChild){
           //   return false;
           // }
-          _this._show($elem);
+          _this._show($elem.parent('li'));
 
           if (_this.options.closeOnClick) {
             var $body = $('body').not(_this.$wrapper);
@@ -2991,9 +3060,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       key: '_keyboardEvents',
       value: function _keyboardEvents() {
         var _this = this;
-        this.$menuItems.add(this.$element.find('.js-drilldown-back')).on('keydown.zf.drilldown', function (e) {
+
+        this.$menuItems.add(this.$element.find('.js-drilldown-back > a')).on('keydown.zf.drilldown', function (e) {
+
           var $element = $(this),
-              $elements = $element.parent('ul').children('li'),
+              $elements = $element.parent('li').parent('ul').children('li').children('a'),
               $prevElement,
               $nextElement;
 
@@ -3004,28 +3075,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return;
             }
           });
+
           Foundation.Keyboard.handleKey(e, 'Drilldown', {
             next: function () {
               if ($element.is(_this.$submenuAnchors)) {
-                _this._show($element);
-                $element.on(Foundation.transitionend($element), function () {
-                  $element.find('ul li').filter(_this.$menuItems).first().focus();
+                _this._show($element.parent('li'));
+                $element.parent('li').one(Foundation.transitionend($element), function () {
+                  $element.parent('li').find('ul li a').filter(_this.$menuItems).first().focus();
                 });
+                e.preventDefault();
               }
             },
             previous: function () {
-              _this._hide($element.parent('ul'));
-              $element.parent('ul').on(Foundation.transitionend($element), function () {
+              _this._hide($element.parent('li').parent('ul'));
+              $element.parent('li').parent('ul').one(Foundation.transitionend($element), function () {
                 setTimeout(function () {
-                  $element.parent('ul').parent('li').focus();
+                  $element.parent('li').parent('ul').parent('li').children('a').first().focus();
                 }, 1);
               });
+              e.preventDefault();
             },
             up: function () {
               $prevElement.focus();
+              e.preventDefault();
             },
             down: function () {
               $nextElement.focus();
+              e.preventDefault();
             },
             close: function () {
               _this._back();
@@ -3034,19 +3110,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             open: function () {
               if (!$element.is(_this.$menuItems)) {
                 // not menu item means back button
-                _this._hide($element.parent('ul'));
-                setTimeout(function () {
-                  $element.parent('ul').parent('li').focus();
-                }, 1);
+                _this._hide($element.parent('li').parent('ul'));
+                $element.parent('li').parent('ul').one(Foundation.transitionend($element), function () {
+                  setTimeout(function () {
+                    $element.parent('li').parent('ul').parent('li').children('a').first().focus();
+                  }, 1);
+                });
+                e.preventDefault();
               } else if ($element.is(_this.$submenuAnchors)) {
-                _this._show($element);
-                setTimeout(function () {
-                  $element.find('ul li').filter(_this.$menuItems).first().focus();
-                }, 1);
+                _this._show($element.parent('li'));
+                $element.parent('li').one(Foundation.transitionend($element), function () {
+                  $element.parent('li').find('ul li a').filter(_this.$menuItems).first().focus();
+                });
+                e.preventDefault();
               }
             },
             handled: function () {
-              e.preventDefault();
               e.stopImmediatePropagation();
             }
           });
@@ -3114,7 +3193,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * Opens a submenu.
        * @function
        * @fires Drilldown#open
-       * @param {jQuery} $elem - the current element with a submenu to open.
+       * @param {jQuery} $elem - the current element with a submenu to open, i.e. the `li` tag.
        */
 
     }, {
@@ -3132,7 +3211,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * Hides a submenu
        * @function
        * @fires Drilldown#hide
-       * @param {jQuery} $elem - the current sub-menu to hide.
+       * @param {jQuery} $elem - the current sub-menu to hide, i.e. the `ul` tag.
        */
       value: function _hide($elem) {
         var _this = this;
@@ -3202,7 +3281,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      * @option
      * @example '<\li><\a>Back<\/a><\/li>'
      */
-    backButton: '<li class="js-drilldown-back"><a>Back</a></li>',
+    backButton: '<li class="js-drilldown-back"><a tabindex="0">Back</a></li>',
     /**
      * Markup used to wrap drilldown menu. Use a class name for independent styling; the JS applied class: `is-drilldown` is required. Remove the backslash (`\`) if copy and pasting.
      * @option
@@ -3312,8 +3391,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       key: 'getPositionClass',
       value: function getPositionClass() {
-        var position = this.$element[0].className.match(/\b(top|left|right)\b/g);
-        position = position ? position[0] : '';
+        var verticalPosition = this.$element[0].className.match(/(top|left|right|bottom)/g);
+        verticalPosition = verticalPosition ? verticalPosition[0] : '';
+        var horizontalPosition = /float-(.+)\s/.exec(this.$anchor[0].className);
+        horizontalPosition = horizontalPosition ? horizontalPosition[1] : '';
+        var position = horizontalPosition ? horizontalPosition + ' ' + verticalPosition : verticalPosition;
         return position;
       }
 
@@ -3734,7 +3816,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.$tabs = this.$element.children('[role="menuitem"]');
         this.$tabs.find('ul.is-dropdown-submenu').addClass(this.options.verticalClass);
 
-        if (this.$element.hasClass(this.options.rightClass) || this.options.alignment === 'right' || Foundation.rtl()) {
+        if (this.$element.hasClass(this.options.rightClass) || this.options.alignment === 'right' || Foundation.rtl() || this.$element.parents('.top-bar-right').is('*')) {
           this.options.alignment = 'right';
           subs.addClass('opens-left');
         } else {
@@ -4304,7 +4386,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       key: 'getHeightsByRow',
       value: function getHeightsByRow(cb) {
-        var lastElTopOffset = this.$watched.first().offset().top,
+        var lastElTopOffset = this.$watched.length ? this.$watched.first().offset().top : 0,
             groups = [],
             group = 0;
         //group by Row
@@ -4612,7 +4694,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }).trigger(trigger);
         }
         // Replacing background images
-        else if (path.match(/\.(gif|jpg|jpeg|tiff|png)([?#].*)?/i)) {
+        else if (path.match(/\.(gif|jpg|jpeg|png|svg|tiff)([?#].*)?/i)) {
             this.$element.css({ 'background-image': 'url(' + path + ')' }).trigger(trigger);
           }
           // Replacing HTML
@@ -5592,7 +5674,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var $controls = this.$element.find('.' + this.options.nextClass + ', .' + this.options.prevClass);
             $controls.attr('tabindex', 0)
             //also need to handle enter/return and spacebar key presses
-            .on('click.zf.orbit touchend.zf.orbit', function () {
+            .on('click.zf.orbit touchend.zf.orbit', function (e) {
+              e.preventDefault();
               _this.changeSlide($(this).hasClass(_this.options.nextClass));
             });
           }
@@ -6276,17 +6359,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var outerWidth = $(window).width();
         var height = this.$element.outerHeight();
         var outerHeight = $(window).height();
-        var left = parseInt((outerWidth - width) / 2, 10);
-        var top;
-        if (height > outerHeight) {
-          top = parseInt(Math.min(100, outerHeight / 10), 10);
+        var left, top;
+        if (this.options.hOffset === 'auto') {
+          left = parseInt((outerWidth - width) / 2, 10);
         } else {
-          top = parseInt((outerHeight - height) / 4, 10);
+          left = parseInt(this.options.hOffset, 10);
+        }
+        if (this.options.vOffset === 'auto') {
+          if (height > outerHeight) {
+            top = parseInt(Math.min(100, outerHeight / 10), 10);
+          } else {
+            top = parseInt((outerHeight - height) / 4, 10);
+          }
+        } else {
+          top = parseInt(this.options.vOffset, 10);
         }
         this.$element.css({ top: top + 'px' });
-        // only worry about left if we don't have an overlay, otherwise we're perfectly in the middle
-        if (!this.$overlay) {
+        // only worry about left if we don't have an overlay or we havea  horizontal offset,
+        // otherwise we're perfectly in the middle
+        if (!this.$overlay || this.options.hOffset !== 'auto') {
           this.$element.css({ left: left + 'px' });
+          this.$element.css({ margin: '0px' });
         }
       }
 
@@ -6467,10 +6560,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
               }
             });
-            if (_this.focusableElements.length === 0) {
-              // no focusable elements inside the modal at all, prevent tabbing in general
-              e.preventDefault();
-            }
           });
         }
 
@@ -6485,11 +6574,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 _this.focusableElements.eq(0).focus();
                 e.preventDefault();
               }
+              if (_this.focusableElements.length === 0) {
+                // no focusable elements inside the modal at all, prevent tabbing in general
+                e.preventDefault();
+              }
             },
             tab_backward: function () {
               if (_this.$element.find(':focus').is(_this.focusableElements.eq(0)) || _this.$element.is(':focus')) {
                 // left modal upwards, setting focus to last element
                 _this.focusableElements.eq(-1).focus();
+                e.preventDefault();
+              }
+              if (_this.focusableElements.length === 0) {
+                // no focusable elements inside the modal at all, prevent tabbing in general
                 e.preventDefault();
               }
             },
@@ -6623,6 +6720,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        */
       value: function destroy() {
         if (this.options.overlay) {
+          this.$element.appendTo($('body')); // move $element outside of $overlay to prevent error unregisterPlugin()
           this.$overlay.hide().off().remove();
         }
         this.$element.hide().off();
@@ -6682,15 +6780,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /**
      * Distance, in pixels, the modal should push down from the top of the screen.
      * @option
-     * @example 100
+     * @example auto
      */
-    vOffset: 100,
+    vOffset: 'auto',
     /**
      * Distance, in pixels, the modal should push in from the side of the screen.
      * @option
-     * @example 0
+     * @example auto
      */
-    hOffset: 0,
+    hOffset: 'auto',
     /**
      * Allows the modal to be fullscreen, completely blocking out the rest of the view. JS checks for this as well.
      * @option
@@ -6890,7 +6988,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             elemDim = this.$element[0].getBoundingClientRect()[hOrW],
 
         //percentage of bar min/max value based on click or drag point
-        pctOfBar = percent(location, this.options.end).toFixed(2),
+        pctOfBar = percent(location - this.options.start, this.options.end - this.options.start).toFixed(2),
 
         //number of actual pixels to shift the handle, based on the percentage obtained above
         pxToMove = (elemDim - handleDim) * pctOfBar,
@@ -7044,7 +7142,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           //if the cursor position is less than or greater than the elements bounding coordinates, set coordinates within those bounds
           barXY = barOffset > 0 ? -halfOfHandle : barOffset - halfOfHandle < -barDim ? barDim : Math.abs(barOffset),
               offsetPct = percent(barXY, barDim);
-          value = (this.options.end - this.options.start) * offsetPct;
+          value = (this.options.end - this.options.start) * offsetPct + this.options.start;
 
           // turn everything around for RTL, yay math!
           if (Foundation.rtl() && !this.options.vertical) {
