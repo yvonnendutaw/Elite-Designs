@@ -7,8 +7,29 @@ p {
 }
 .header h1 {
     color: #C42332;
-}
-.header h1,
-h3 {
+    font-size: 4em;
     text-align: center;
+    line-height: 1em;
+    letter-spacing: 5px;
+}
+.header h3 {
+    text-align: center;
+    font-size: 2em;
+}
+hr {
+    width: 100%;
+}
+.header {
+    margin-bottom: 11em;
+    margin-top: -6%;
+}
+#landing {
+    background-image: url(../img/img2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+#about h3 {
+    font-size: 3em;
 }
