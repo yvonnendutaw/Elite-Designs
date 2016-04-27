@@ -19,10 +19,22 @@
 <body>
     <div class="container">
 
-<<<<<<< HEAD
-        <nav>
 
-        </nav>
+
+        <!-- coderops nav bar    -->
+        <section class="section section--menu" id="Sebastian">
+            <!--				<h2 class="section__title">Sebastian</h2>-->
+            <span class="link-copy"></span>
+            <nav class="menu menu--sebastian">
+                <ul class="menu__list">
+                    <li class="menu__item menu__item--current"><a href="#" class="menu__link">Home</a></li>
+                    <li class="menu__item"><a href="#landing" class="menu__link">Shop</a></li>
+                    <li class="menu__item"><a href="#about" class="menu__link">News</a></li>
+                    <li class="menu__item"><a href="#portfolio" class="menu__link">Support</a></li>
+                    <li class="menu__item"><a href="#contact" class="menu__link">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
         <section id="landing">
 
         </section>
@@ -100,21 +112,8 @@
                 </form>
             </div>
         </section>
-=======
-        <!-- coderops nav bar    -->
-        <section class="section section--menu" id="Sebastian">
-            <!--				<h2 class="section__title">Sebastian</h2>-->
-            <span class="link-copy"></span>
-            <nav class="menu menu--sebastian">
-                <ul class="menu__list">
-                    <li class="menu__item menu__item--current"><a href="#" class="menu__link">Home</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Shop</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">News</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Support</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
-                </ul>
-            </nav>
-        </section>
+
+
 
 
 
@@ -139,7 +138,7 @@
             <small>&copy;ELITEDESGIN</small>
         </footer>
         <!--  End here      -->
->>>>>>> origin/respond
+
     </div>
     <footer>
 
@@ -157,7 +156,7 @@
             [].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
                 var menuItems = menu.querySelectorAll('.menu__link'),
                     setCurrent = function(ev) {
-                        ev.preventDefault();
+                        //                        ev.preventDefault();
 
                         var item = ev.target.parentNode; // li
 
