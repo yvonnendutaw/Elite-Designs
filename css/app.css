@@ -1,9 +1,11 @@
 html,
 body,
 h1,
-h3 {
+h3,
+p {
     font-family: 'Lora', serif;
 }
+<<<<<<< HEAD
 .grid {
     padding: 20px 20px 100px 20px;
     max-width: 1300px;
@@ -88,4 +90,33 @@ h3 {
 }
 .cs-style-1 figcaption a {
     margin-top: 30px;
+=======
+.header h1 {
+    color: #C42332;
+    font-size: 4em;
+    text-align: center;
+    line-height: 1em;
+    letter-spacing: 5px;
+}
+.header h3 {
+    text-align: center;
+    font-size: 2em;
+}
+hr {
+    width: 100%;
+}
+.header {
+    margin-bottom: 11em;
+    margin-top: -6%;
+}
+#landing {
+    background-image: url(../img/img2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+#about h3 {
+    font-size: 3em;
+>>>>>>> yvonne
 }
