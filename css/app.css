@@ -119,12 +119,11 @@
         #about {
             color: #222;
         }
-
-footer {
-    height: 33%;
-    background-color: #222;
-}
-
-.social-media {
-    font-size: 2em;
-}
+        footer {
+            text-align: center;
+            height: 33%;
+            background-color: #222;
+        }
+        .social-media {
+            font-size: 2em;
+        }
