@@ -4,11 +4,11 @@
         h3,
         p {
             font-family: 'Lora', serif;
+            color: #222;
         }
         #about,
-        #portfolio,
         #contact {
-            padding: 25% 0;
+            padding: 10% 0;
         }
         .grid {
             padding: 20px 20px 100px 20px;
@@ -116,7 +116,7 @@
             background-attachment: fixed;
             background-size: cover;
             background-repeat: no-repeat;
-            width: 100%;
+            /*            width: 100%;*/
         }
         #about h3 {
             font-size: 3em;
@@ -126,9 +126,34 @@
         }
         footer {
             text-align: center;
-            height: 33%;
+            height: 20%;
             background-color: #222;
         }
-        .social-media {
+        .menu2 li {
+            padding: 8px;
+            list-style: none;
+            display: inline;
+            text-align: center;
             font-size: 2em;
+        }
+        /*map responsiveness code*/
+
+        .google-map {
+            position: relative;
+            padding-bottom: 75%;
+            /* This is the aspect ratio*/
+            height: 0;
+            overflow: hidden;
+        }
+        .google-map iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+        }
+        .button.hollow {
+            background-color: #C32332;
+            color: #fff;
+            width: 25%;
         }
