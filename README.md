@@ -1,3 +1,3 @@
 # ELITE DESIGNS
 
-## Intrior Designs Agency Website
+## Interior Designs Agency Website
