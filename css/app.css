@@ -1,310 +1,317 @@
-                    html,
-                body,
-                h1,
-                h3,
-                h4,
-                h5,
-                h6,
-                p,
-                {
-                    font-family: 'Lora', serif;
-                    color: #222;
-                }
-                #about,
-                #contact {
-                    padding: 10% 0;
-                }
-                #contact h1 {
-                    color: #222;
-                }
-                .grid {
-                    padding: 20px 20px 100px 20px;
-                    max-width: 1300px;
-                    margin: 0 auto;
-                    list-style: none;
-                    text-align: center;
-                }
-                .grid li {
-                    display: inline-block;
-                    width: 440px;
-                    margin: 0;
-                    padding: 20px;
-                    text-align: left;
-                    position: relative;
-                }
-                .grid figure {
-                    margin: 0;
-                    position: relative;
-                }
-                .grid figure img {
-                    max-width: 100%;
-                    display: block;
-                    position: relative;
-                }
-                .grid figcaption {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    padding: 20px;
-                    background: #2c3f52;
-                    color: #ed4e6e;
-                }
-                .grid figcaption h3 {
-                    margin: 0;
-                    padding: 0;
-                    color: #fff;
-                }
-                .grid figcaption span:before {
-                    content: 'by ';
-                }
-                .grid figcaption a {
-                    text-align: center;
-                    padding: 5px 10px;
-                    border-radius: 2px;
-                    display: inline-block;
-                    background: #ed4e6e;
-                    color: #fff;
-                }
-                /*small screens*/
+                                                     {
+                                                         font-family: 'Lora', serif;
+                                                         color: #222;
+                                                     }
+                                                     #about,
+                                                     #contact {
+                                                         padding: 10% 0;
+                                                     }
+                                                     #contact h1 {
+                                                         color: #222;
+                                                     }
+                                                     .grid {
+                                                         padding: 20px 20px 100px 20px;
+                                                         max-width: 1300px;
+                                                         margin: 0 auto;
+                                                         list-style: none;
+                                                         text-align: center;
+                                                     }
+                                                     .grid li {
+                                                         display: inline-block;
+                                                         width: 440px;
+                                                         margin: 0;
+                                                         padding: 20px;
+                                                         text-align: left;
+                                                         position: relative;
+                                                     }
+                                                     .grid figure {
+                                                         margin: 0;
+                                                         position: relative;
+                                                     }
+                                                     .grid figure img {
+                                                         max-width: 100%;
+                                                         display: block;
+                                                         position: relative;
+                                                     }
+                                                     .grid figcaption {
+                                                         position: absolute;
+                                                         top: 0;
+                                                         left: 0;
+                                                         padding: 20px;
+                                                         background: #2c3f52;
+                                                         color: #ed4e6e;
+                                                     }
+                                                     .grid figcaption h3 {
+                                                         margin: 0;
+                                                         padding: 0;
+                                                         color: #fff;
+                                                     }
+                                                     .grid figcaption span:before {
+                                                         content: 'by ';
+                                                     }
+                                                     .grid figcaption a {
+                                                         text-align: center;
+                                                         padding: 5px 10px;
+                                                         border-radius: 2px;
+                                                         display: inline-block;
+                                                         background: #ed4e6e;
+                                                         color: #fff;
+                                                     }
+                                                     /*small screens*/
 
-                @media screen and (max-width: 31.5em) {
-                    .grid {
-                        padding: 10px 10px 100px 10px;
-                    }
-                    .grid li {
-                        width: 100%;
-                        min-width: 300px;
-                    }
-                }
-                /*effect*/
+                                                     @media screen and (max-width: 31.5em) {
+                                                         .grid {
+                                                             padding: 10px 10px 100px 10px;
+                                                         }
+                                                         .grid li {
+                                                             width: 100%;
+                                                             min-width: 300px;
+                                                         }
+                                                     }
+                                                     /*effect*/
 
-                .cs-style-1 figcaption {
-                    height: 100%;
-                    width: 100%;
-                    opacity: 0;
-                    text-align: center;
-                    backface-visibility: hidden;
-                    transition: transform 0.3s, opacity 0.3s;
-                }
-                .no-touch .cs-style-1 figure:hover figcaption,
-                .cs-style-1 figure.cs-hover figcaption {
-                    opacity: 1;
-                    transform: translate(15px, 15px);
-                }
-                .cs-style-1 figcaption h3 {
-                    margin-top: 70px;
-                }
-                .cs-style-1 figcaption span {
-                    display: block;
-                }
-                .cs-style-1 figcaption a {
-                    margin-top: 30px;
-                }
-                .header h1 {
-                    color: #C42332;
-                    font-size: 4em;
-                    text-align: center;
-                    line-height: 1em;
-                    letter-spacing: 5px;
-                }
-                .header h3 {
-                    text-align: center;
-                    font-size: 2em;
-                }
-                hr {
-                    width: 100%;
-                }
-                .header {
-                    margin-bottom: 11em;
-                    margin-top: -6%;
-                }
-                #landing {
-                    background-image: url(../img/img2.jpg);
-                    background-attachment: fixed;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    /*            width: 100%;*/
-                }
-                #about h3 {
-                    font-size: 3em;
-                }
-                #about {
-                    color: #222;
-                }
-                footer {
-                    text-align: center;
-                    height: 20%;
-                    background-color: #222;
-                }
-                footer i {
-                    transition: color 1s;
-                }
-                footer i:hover {
-                    transition: color 1s;
-                }
-                .menu2 li {
-                    padding: 8px;
-                    list-style: none;
-                    display: inline;
-                    text-align: center;
-                    font-size: 2em;
-                }
-                /*map responsiveness code*/
+                                                     .cs-style-1 figcaption {
+                                                         height: 100%;
+                                                         width: 100%;
+                                                         opacity: 0;
+                                                         text-align: center;
+                                                         backface-visibility: hidden;
+                                                         transition: transform 0.3s, opacity 0.3s;
+                                                     }
+                                                     .no-touch .cs-style-1 figure:hover figcaption,
+                                                     .cs-style-1 figure.cs-hover figcaption {
+                                                         opacity: 1;
+                                                         transform: translate(15px, 15px);
+                                                     }
+                                                     .cs-style-1 figcaption h3 {
+                                                         margin-top: 70px;
+                                                     }
+                                                     .cs-style-1 figcaption span {
+                                                         display: block;
+                                                     }
+                                                     .cs-style-1 figcaption a {
+                                                         margin-top: 30px;
+                                                     }
+                                                     .header h1 {
+                                                         color: #C42332;
+                                                         font-size: 4em;
+                                                         text-align: center;
+                                                         line-height: 1em;
+                                                         letter-spacing: 5px;
+                                                     }
+                                                     .header h3 {
+                                                         text-align: center;
+                                                         font-size: 2em;
+                                                     }
+                                                     hr {
+                                                         width: 100%;
+                                                     }
+                                                     .header {
+                                                         margin-bottom: 11em;
+                                                         margin-top: -6%;
+                                                     }
+                                                     #landing {
+                                                         background-image: url(../img/img2.jpg);
+                                                         background-attachment: fixed;
+                                                         background-size: cover;
+                                                         background-repeat: no-repeat;
+                                                         /*            width: 100%;*/
+                                                     }
+                                                     #about h3 {
+                                                         font-size: 3em;
+                                                     }
+                                                     #about {
+                                                         color: #222;
+                                                     }
+                                                     footer {
+                                                         text-align: center;
+                                                         height: 20%;
+                                                         background-color: #222;
+                                                     }
+                                                     footer i {
+                                                         transition: color 1s;
+                                                     }
+                                                     footer i:hover {
+                                                         transition: color 1s;
+                                                     }
+                                                     .menu2 li {
+                                                         padding: 8px;
+                                                         list-style: none;
+                                                         display: inline;
+                                                         text-align: center;
+                                                         font-size: 2em;
+                                                     }
+                                                     /*map responsiveness code*/
 
-                .google-map {
-                    position: relative;
-                    padding-bottom: 75%;
-                    /* This is the aspect ratio*/
-                    height: 0;
-                    overflow: hidden;
-                }
-                .google-map iframe {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100% !important;
-                    height: 100% !important;
-                }
-                .button.hollow {
-                    background-color: #C32332;
-                    color: #fff;
-                    width: 25%;
-                }
-                #portfolio h1 {
-                    color: #222;
-                }
-                .text-up {
-                    color: #222;
-                }
-                /*small screen nav disable display*/
+                                                     .google-map {
+                                                         position: relative;
+                                                         padding-bottom: 75%;
+                                                         /* This is the aspect ratio*/
+                                                         height: 0;
+                                                         overflow: hidden;
+                                                     }
+                                                     .google-map iframe {
+                                                         position: absolute;
+                                                         top: 0;
+                                                         left: 0;
+                                                         width: 100% !important;
+                                                         height: 100% !important;
+                                                     }
+                                                     .button.hollow {
+                                                         background-color: #C32332;
+                                                         color: #fff;
+                                                         width: 25%;
+                                                     }
+                                                     #portfolio h1 {
+                                                         color: #222;
+                                                     }
+                                                     .text-up {
+                                                         color: #222;
+                                                     }
+                                                     /* on small screen nav disable display*/
 
-                @media (max-width: 980px) {
-                    .section--menu {
-                        display: none;
-                    }
-                    .section {
-                        display: none;
-                    }
-                    .menu--list {
-                        display: none;
-                    }
-                    .menu {
-                        display: none;
-                    }
-                }
-                /*small screen navbar*/
+                                                     @media (max-width: 980px) {
+                                                         .section--menu {
+                                                             display: none;
+                                                         }
+                                                         .section {
+                                                             display: none;
+                                                         }
+                                                         .menu--list {
+                                                             display: none;
+                                                         }
+                                                         .menu {
+                                                             display: none;
+                                                         }
+                                                     }
+                                                     /*small screen navbar*/
 
-                @media (max-width:979px) {
-                    #container {
-                        z-index: 111;
-                    }
-                    .navT {
-                        -webkit-transition: all 0.25s;
-                        z-index: 111;
-                        cursor: pointer;
-                        width: 100%;
-                        background: #C42332;
-                        height: 65px;
-                        left: 0;
-                        top: 0;
-                        position: fixed;
-                    }
-                    .navT .icon {
-                        -webkit-transition: all 0.25s;
-                        position: absolute;
-                        width: 30px;
-                        height: 1px;
-                        left: 15px;
-                        top: 30px;
-                        background-color: white;
-                    }
-                    .navT .icon:before,
-                    .navT .icon:after {
-                        -webkit-transition: all 0.25s;
-                        width: 30px;
-                        height: 1px;
-                        left: 0;
-                        background: white;
-                        position: absolute;
-                        content: '';
-                    }
-                    .navT .icon:before {
-                        top: -10px;
-                    }
-                    .navT .icon:after {
-                        top: 10px;
-                    }
-                    .navT:hover {
-                        background: #C42332;
-                    }
-                    .navT:hover .icon:before {
-                        top: -12px;
-                    }
-                    .navT:hover .icon:after {
-                        top: 12px;
-                    }
-                    .navT.active .icon {
-                        -webkit-transform: rotate(180deg);
-                        background-color: transparent;
-                        left: 10px;
-                    }
-                    .navT.active .icon:before,
-                    .navT.active .icon:after {
-                        top: 0;
-                    }
-                    .navT.active .icon:before {
-                        -webkit-transform: rotate(45deg);
-                    }
-                    .navT.active .icon:after {
-                        -webkit-transform: rotate(-45deg);
-                    }
-                    #menu {
-                        z-index: 111;
-                        -webkit-transition: all 0.5s;
-                        text-align: center;
-                        position: fixed;
-                        left: 0;
-                        right: 0;
-                        margin: 0 auto;
-                        top: 65px;
-                        font-size: 18px;
-                        font-family: Roboto;
-                        font-weight: 100;
-                        text-transform: uppercase;
-                        width: 100%;
-                        height: 0;
-                        border-bottom: 1px solid transparent;
-                        overflow: hidden;
-                    }
-                    #menu ul {
-                        list-style: none;
-                        padding: 0;
-                        letter-spacing: 0.4em;
-                    }
-                    #menu li:first-child {
-                        margin-top: 0;
-                    }
-                    #menu li {
-                        -webkit-transition: all 0.2s;
-                        margin-top: 10px;
-                        padding: 5px 0;
-                        color: #171717;
-                    }
-                    #menu a {
-                        padding: 8px;
-                        -webkit-transition: all 0.25s;
-                        cursor: pointer;
-                    }
-                    #menu a:hover {
-                        letter-spacing: 0.5em;
-                        /*        text-decoration: underline;*/
-                    }
-                    #menu.open {
-                        height: 200px;
-                        width: 100%;
-                        background: #fff;
-                        border-bottom: 1px solid black;
-                    }
-                    .space {
-                        letter-spacing: 0;
-                    }
+                                                     #container {
+                                                         z-index: 111;
+                                                     }
+                                                     .navT {
+                                                         -webkit-transition: all 0.25s;
+                                                         z-index: 111;
+                                                         cursor: pointer;
+                                                         width: 100%;
+                                                         background: #C42332;
+                                                         height: 65px;
+                                                         left: 0;
+                                                         top: 0;
+                                                         position: fixed;
+                                                     }
+                                                     .navT .icon {
+                                                         -webkit-transition: all 0.25s;
+                                                         position: absolute;
+                                                         width: 30px;
+                                                         height: 1px;
+                                                         left: 15px;
+                                                         top: 30px;
+                                                         background-color: white;
+                                                     }
+                                                     .navT .icon:before,
+                                                     .navT .icon:after {
+                                                         -webkit-transition: all 0.25s;
+                                                         width: 30px;
+                                                         height: 1px;
+                                                         left: 0;
+                                                         background: white;
+                                                         position: absolute;
+                                                         content: '';
+                                                     }
+                                                     .navT .icon:before {
+                                                         top: -10px;
+                                                     }
+                                                     .navT .icon:after {
+                                                         top: 10px;
+                                                     }
+                                                     .navT:hover {
+                                                         background: #C42332;
+                                                     }
+                                                     .navT:hover .icon:before {
+                                                         top: -12px;
+                                                     }
+                                                     .navT:hover .icon:after {
+                                                         top: 12px;
+                                                     }
+                                                     .navT.active .icon {
+                                                         -webkit-transform: rotate(180deg);
+                                                         background-color: transparent;
+                                                         left: 10px;
+                                                     }
+                                                     .navT.active .icon:before,
+                                                     .navT.active .icon:after {
+                                                         top: 0;
+                                                     }
+                                                     .navT.active .icon:before {
+                                                         -webkit-transform: rotate(45deg);
+                                                     }
+                                                     .navT.active .icon:after {
+                                                         -webkit-transform: rotate(-45deg);
+                                                     }
+                                                     #menu {
+                                                         z-index: 111;
+                                                         -webkit-transition: all 0.5s;
+                                                         text-align: center;
+                                                         position: fixed;
+                                                         left: 0;
+                                                         right: 0;
+                                                         margin: 0 auto;
+                                                         top: 65px;
+                                                         font-size: 18px;
+                                                         font-family: Roboto;
+                                                         font-weight: 100;
+                                                         text-transform: uppercase;
+                                                         width: 100%;
+                                                         height: 0;
+                                                         border-bottom: 1px solid transparent;
+                                                         overflow: hidden;
+                                                     }
+                                                     #menu ul {
+                                                         list-style: none;
+                                                         padding: 0;
+                                                         letter-spacing: 0.4em;
+                                                     }
+                                                     #menu li:first-child {
+                                                         margin-top: 0;
+                                                     }
+                                                     #menu li {
+                                                         -webkit-transition: all 0.2s;
+                                                         margin-top: 10px;
+                                                         padding: 5px 0;
+                                                         color: #171717;
+                                                     }
+                                                     #menu a {
+                                                         padding: 8px;
+                                                         -webkit-transition: all 0.25s;
+                                                         cursor: pointer;
+                                                     }
+                                                     #menu a:hover {
+                                                         letter-spacing: 0.5em;
+                                                         /*        text-decoration: underline;*/
+                                                     }
+                                                     #menu.open {
+                                                         height: 200px;
+                                                         width: 100%;
+                                                         background: #fff;
+                                                         border-bottom: 1px solid black;
+                                                     }
+                                                     .space {
+                                                         letter-spacing: 0;
+                                                     }
+                                                     /* disable small nav from display on big screen*/
+
+                                                     @media (min-width:980px) {
+                                                         #menu ul {
+                                                             display: none;
+                                                         }
+                                                         .navi {
+                                                             display: none;
+                                                         }
+                                                         .navT {
+                                                             display: none;
+                                                         }
+                                                         #contaner ul {
+                                                             display: none;
+                                                         }
+                                                     }
