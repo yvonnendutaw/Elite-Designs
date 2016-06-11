@@ -207,7 +207,7 @@
                                                          height: 1px;
                                                          left: 15px;
                                                          top: 30px;
-                                                         background-color: white;
+                                                         background-color: #fff;
                                                      }
                                                      .navT .icon:before,
                                                      .navT .icon:after {
@@ -215,7 +215,7 @@
                                                          width: 30px;
                                                          height: 1px;
                                                          left: 0;
-                                                         background: white;
+                                                         background: #fff;
                                                          position: absolute;
                                                          content: '';
                                                      }
@@ -279,7 +279,7 @@
                                                          -webkit-transition: all 0.2s;
                                                          margin-top: 10px;
                                                          padding: 5px 0;
-                                                         color: #171717;
+                                                         color: #000;
                                                      }
                                                      #menu a {
                                                          padding: 8px;
@@ -295,6 +295,7 @@
                                                          width: 100%;
                                                          background: #fff;
                                                          border-bottom: 1px solid black;
+                                                         color: #000;
                                                      }
                                                      .space {
                                                          letter-spacing: 0;
@@ -314,4 +315,7 @@
                                                          #contaner ul {
                                                              display: none;
                                                          }
+                                                     }
+                                                     .overlay {
+                                                         background-color: rgba(255, 255, 255, 0.58);
                                                      }
